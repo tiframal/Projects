@@ -26,7 +26,9 @@ Load balancers enable network traffic to be shared between two or more servers. 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics. Filebeat generates log files for analysis through ElasticSearch, Logstash, and Kibana. Metricbeat is used to monitor system information such as CPU usage, memory, and load.
 
 The configuration details of each machine may be found below.
+
 ![](Configuration.PNG)
+
 
 Note: Use the Markdown Table Generator to add/remove values from the table.
 

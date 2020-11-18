@@ -84,12 +84,11 @@ These Beats allow us to collect the following information from each machine:
 2) Metricbeat monitors system and service information such as CPU usage and memory. This enables admins to track changes in machine performance, which can occur be impacted when malicious software is installed. Metricbeat is also able to detect changes to sudo privileges. 
 
 Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+In order to use the Ansible playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 
-Copy the playbook file to the correct target.
-Update the hosts file to include...
-Run the playbook, and navigate to ____ to check that the installation worked as expected.
+1) Copy the Ansible playbook file to the correct folder (/etc/ansible). The "hosts" line in the playbook is used to ensure that packages are installed on the correct servers. 
+2) Update the hosts file to include the host name (webservers & elk), the ansible python interpreter, and the IP addresses of the virtual machines (10.0.0.6, 10.0.0.7, 10.0.0.8, and 10.1.0.4). To ensure that the ELK server is running, go to 
 
 TODO: Answer the following questions to fill in the blanks:
 

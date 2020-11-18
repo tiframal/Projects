@@ -90,4 +90,4 @@ In order to use the Install-Elk playbook, you will need to have an Ansible contr
 SSH into the control node and follow the steps below:
 
 1) Copy the Install-Elk playbook file to the correct folder (/etc/ansible). The "hosts" line in the playbook is used to ensure that packages are installed on the appropriate machines. 
-2) Update the hosts file to include the host name (elk), the ansible python interpreter, and the IP addresses of the virtual machines (10.1.0.4). To ensure that the ELK server is running, go to http://40.79.37.97:5601/app/kibana (the IP address in the URL is the public IP address of the ELK server).
+2) Update the hosts file to include the host name (elk), the ansible python interpreter, and the IP addresses of the virtual machines (10.1.0.4). To ensure that the ELK server is running, go to http://40.79.37.97:5601/app/kibana (the IP address in the URL is the public IP address of the ELK VM).

@@ -3,7 +3,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![](Azure%20Resource%20Group.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Elk playbook file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
 
 
@@ -84,8 +84,8 @@ These Beats allow us to collect the following information from each machine:
 2) Metricbeat monitors system and service information such as CPU usage and memory. This enables admins to track changes in machine performance, which can occur be impacted when malicious software is installed. Metricbeat is also able to detect changes to sudo privileges. 
 
 Using the Playbook
-In order to use the Elk playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+In order to use the Install-Elk playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 
-1) Copy the Elk playbook file to the correct folder (/etc/ansible). The "hosts" line in the playbook is used to ensure that packages are installed on the appropriate servers. 
+1) Copy the Install-Elk playbook file to the correct folder (/etc/ansible). The "hosts" line in the playbook is used to ensure that packages are installed on the appropriate servers. 
 2) Update the hosts file to include the host name (elk), the ansible python interpreter, and the IP addresses of the virtual machines (10.1.0.4). To ensure that the ELK server is running, go to http://40.79.37.97:5601/app/kibana (the IP address in the URL is the public IP address of the ELK server).

@@ -24,7 +24,7 @@ Load balancing ensures that the application will be highly available, in additio
 
 Load balancers enable network traffic to be shared between two or more servers. This protects against distributed denial-of-service (DDoS) attacks. The advantage of using a jump box is that it allows admins to create a specific and highly secured machine to access and configure servers. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics. Filebeat monitors files on the machine and generates log files for analysis through ElasticSearch, Logstash, and Kibana. Metricbeat is used to monitor system and service information such as CPU usage, memory, and load and also feeds data to ELK for analysis.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system metrics. Filebeat monitors files on the machine and generates log files for analysis through ElasticSearch, Logstash, and Kibana. Metricbeat is used to monitor system and service information such as CPU usage, memory, and load and also feeds data to ELK for analysis.
 
 The configuration details of each machine may be found below. Elk VM has its own VNet and is in a separate availability zone than Web-1, Web-2, and Web-3. It can however be accessed through the Jump Box and is connected to the VNet for the other VMs using a Peering option.
 

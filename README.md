@@ -68,15 +68,20 @@ The following screenshot displays the result of running docker ps after successf
 ![](Elk-Docker.png)
 
 Target Machines & Beats
+
 This ELK server is configured to monitor the following machines:
 
-TODO: List the IP addresses of the machines you are monitoring
+Web-1 with DVWA: 10.0.0.6
+Web-2 with DVWA: 10.0.0.7
+Web-3 with DVWA: 10.0.0.8
 
 We have installed the following Beats on these machines:
-
-TODO: Specify which Beats you successfully installed
+1) Filebeat
+2) Metricbeat
 
 These Beats allow us to collect the following information from each machine:
+Filebeat monitors log files.
+Metricbeat monitors systemin ormation such as CPU usage and memory. 
 
 TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.
 

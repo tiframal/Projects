@@ -71,13 +71,13 @@ Target Machines & Beats
 
 This ELK server is configured to monitor the following machines:
 
-1) Web-1 with DVWA: 10.0.0.6
-2) Web-2 with DVWA: 10.0.0.7
-3) Web-3 with DVWA: 10.0.0.8
+* Web-1 with DVWA: 10.0.0.6
+* Web-2 with DVWA: 10.0.0.7
+* Web-3 with DVWA: 10.0.0.8
 
 We have installed the following Beats on these machines:
-1) Filebeat
-2) Metricbeat
+* Filebeat
+* Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 1) Filebeat monitors files and generates log files so that admins can monitor changes in file systems and within files themselves.

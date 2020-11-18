@@ -85,6 +85,7 @@ These Beats allow us to collect the following information from each machine:
 * Metricbeat monitors system and service information such as CPU usage and memory. This enables admins to track changes in machine performance, which can occur be impacted when malicious software is installed. Metricbeat is also able to detect changes to sudo privileges. 
 
 Using the Playbook
+
 In order to use the Install-Elk playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 

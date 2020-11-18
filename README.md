@@ -25,93 +25,42 @@ Load balancers enable network traffic to be shared between two or more servers. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics. Filebeat generates log files for analysis through ElasticSearch, Logstash, and Kibana. Metricbeat is used to monitor system information such as CPU usage, memory, and load.
 
-The configuration details of each machine may be found below.
+The configuration details of each machine may be found below. Elk VM has its own VNet and is in a separate availability zone than Web-1, Web-2, and Web-3. It can however be accessed through the Jump Box and is connected to the VNet for the other VMs using a Peering option.
 
-![](Configuration.PNG)
-
-
-Note: Use the Markdown Table Generator to add/remove values from the table.
-
-
-
-Name
-Function
-IP Address
-Operating System
-
-
-
-
-Jump Box
-Gateway
-10.0.0.1
-Linux
-
-
-TODO
-
-
-
-
-
-TODO
-
-
-
-
-
-TODO
-
-
-
-
-
+| Name            | Function   | IP Address | Operating System |
+|-----------------|------------|------------|------------------|
+| Jump Box        | Gateway    | 10.0.0.4   | Linux            |
+| Web-1 with DVWA | Web server | 10.0.0.6   | Linux            |
+| Web-2 with DVWA | Web server | 10.0.0.7   | Linux            |
+| Web-3 with DVWA | Web server | 10.0.0.8   | Linux            |
+| Elk VM          | Monitoring | 10.1.0.4   | Linux            |
 
 
 Access Policies
-The machines on the internal network are not exposed to the public Internet.
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-
-TODO: Add whitelisted IP addresses
-
-Machines within the network can only be accessed by _____.
-
-TODO: Which machine did you allow to access your ELK VM? What was its IP address?
+The machines on the internal network are not exposed to the public Internet. The machines allow initial connection from the Local Workstation as per the inbound rules for the network security groups. The Local Workstation is able to SSH into the Jump Box via its public IP, which is 40.79.37.97. The Jump Box can then SSH into the ELK machine and the three web servers. The Local Workstation can also access the web servers via HTTP over port 80. In addition, the ELK machine monitors the three web servers.
 
 A summary of the access policies in place can be found in the table below.
 
 
-
-Name
-Publicly Accessible
-Allowed IP Addresses
-
-
-
-
-Jump Box
-Yes/No
-10.0.0.1 10.0.0.2
-
-
-
-
-
-
-
-
-
-
-
+|   Name   | Publicly Accessible | Allowed IP Addresses |
+|:--------:|:-------------------:|:--------------------:|
+| Jump Box | Yes                 | [REDACTED IP]        |
+| Web-1    | No                  | 10.0.0.1-254         |
+| Web-2    | No                  | 10.0.0.1-254         |
+| Web-3    | No                  | 10.0.0.1-254         |
+| ELK VM   | No                  | 10.0.0.1-254         |
 
 
 
 Elk Configuration
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-
-TODO: What is the main advantage of automating configuration with Ansible?
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows admins to spend less time updating or configuring servers through the use of task automation.  
 
 The playbook implements the following tasks:
+1) Install Docker
+3) Install pip3, which would enable the configuration of python packages
+4) Download the Docker image
+5) Increase the use of virtual memory
+6) Download and launch the Docker ELK container
 
 TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
 ...

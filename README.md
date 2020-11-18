@@ -23,7 +23,7 @@ Load balancing ensures that the application will be highly available, in additio
 
 Load balancers enable network traffic to be shared between two or more servers. This protects against distributed denial-of-service (DDoS) attacks. The advantage of using a jump box is that it allows admins to create a specific and highly secured machine to access and configure servers. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics. Filebeat generates log files for analysis through ElasticSearch, Logstash, and Kibana. Metricbeat is used to monitor system information such as CPU usage, memory, and load.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system metrics. Filebeat monitors files on the machine and generates log files for analysis through ElasticSearch, Logstash, and Kibana. Metricbeat is used to monitor system and service information such as CPU usage, memory, and load and also feeds data to ELK for analysis.
 
 The configuration details of each machine may be found below. Elk VM has its own VNet and is in a separate availability zone than Web-1, Web-2, and Web-3. It can however be accessed through the Jump Box and is connected to the VNet for the other VMs using a Peering option.
 
@@ -80,18 +80,15 @@ We have installed the following Beats on these machines:
 2) Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-Filebeat monitors log files.
-Metricbeat monitors systemin ormation such as CPU usage and memory. 
-
-TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.
-
+1) Filebeat monitors files and generates log files so that admins can monitor changes in file systems and within files themselves.
+2) Metricbeat monitors system and service information such as CPU usage and memory. This enables admins to track changes in machine performance, which can occur be impacted when malicious software is installed. Metricbeat is also able to detect changes to sudo privileges. 
 
 Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 
-Copy the _____ file to _____.
-Update the _____ file to include...
+Copy the playbook file to the correct target.
+Update the hosts file to include...
 Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 TODO: Answer the following questions to fill in the blanks:

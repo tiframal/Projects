@@ -80,8 +80,8 @@ We have installed the following Beats on these machines:
 * Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-1) Filebeat monitors files and generates log files so that admins can monitor changes in file systems and within files themselves.
-2) Metricbeat monitors system and service information such as CPU usage and memory. This enables admins to track changes in machine performance, which can occur be impacted when malicious software is installed. Metricbeat is also able to detect changes to sudo privileges. 
+* Filebeat monitors files and generates log files so that admins can monitor changes in file systems and within files themselves.
+* Metricbeat monitors system and service information such as CPU usage and memory. This enables admins to track changes in machine performance, which can occur be impacted when malicious software is installed. Metricbeat is also able to detect changes to sudo privileges. 
 
 Using the Playbook
 In order to use the Install-Elk playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
